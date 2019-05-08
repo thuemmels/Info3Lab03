@@ -1,6 +1,6 @@
 package fabrik;
 
-public class EnkiStiefel implements Schuh {
+public class EnkiStiefel implements Stiefel {
 	public String toString() {
 		return "Marke: Enki, Typ: Stiefel";
 	}
