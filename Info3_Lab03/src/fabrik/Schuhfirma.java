@@ -13,19 +13,17 @@ public class Schuhfirma extends Erzeuger{
 	}
 
 	@Override
-	public Produkt fabrikMethode(String type) {
+	public Produkt fabrikMethode(Typ type) {
 		Produkt schuh;
-		if(type.equals("Sport")) {
-			schuh = new Sportschuh(marke);
-		}
-		else if(type.equals("Wander")) {
-			schuh = new Wanderschuh(marke);
-		}
-		else if(type.equals("Stiefel")) {
-			schuh = new Stiefel(marke);
-		}
-		else {
-			return null;
+		switch(type) {
+		case SPORT: schuh = new Sportschuh(marke);
+		break;
+		case WANDER: schuh = new Wanderschuh(marke);
+		break;
+		case STIEFEL: schuh = new Stiefel(marke);
+		break;
+		default: return null;
+		
 		}
 		return schuh;
 	}

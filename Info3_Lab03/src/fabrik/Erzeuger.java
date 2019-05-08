@@ -2,6 +2,6 @@ package fabrik;
 
 public abstract class Erzeuger {
 	
-	public abstract Produkt fabrikMethode(String type);
+	public abstract Produkt fabrikMethode(Typ type);
 
 }

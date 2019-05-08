@@ -1,6 +1,6 @@
 package fabrik;
 
-public class Schuh extends Produkt {
+public abstract class Schuh extends Produkt {
 	private String marke;
 	
 	public String getMarke() {
