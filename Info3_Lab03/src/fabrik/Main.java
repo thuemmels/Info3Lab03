@@ -3,22 +3,21 @@ package fabrik;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Erzeuger erzeugerD = new Schuhfirma("Didadas");
-		Erzeuger erzeugerU = new Schuhfirma("Umap");
-		Erzeuger erzeugerE = new Schuhfirma("Enki"); 
+		Schuhfirma firma = new DidadasSchuhfirma();
 		
-		Produkt sportschuhD = erzeugerD.fabrikMethode(Typ.SPORT);
-		Produkt wanderschuhD = erzeugerD.fabrikMethode(Typ.WANDER);
-		Produkt stiefelD = erzeugerD.fabrikMethode(Typ.STIEFEL);
+		Schuh sportschuhD = firma.createSchuh(Typ.SPORT);
+		Schuh wanderschuhD = firma.createSchuh(Typ.WANDER);
+		Schuh stiefelD = firma.createSchuh(Typ.STIEFEL);
 		
-		Produkt sportschuhU = erzeugerU.fabrikMethode(Typ.SPORT);
-		Produkt wanderschuhU = erzeugerU.fabrikMethode(Typ.WANDER);
-		Produkt stiefelU = erzeugerU.fabrikMethode(Typ.STIEFEL);
+		firma = new UmapSchuhfirma();
+		Schuh sportschuhU = firma.createSchuh(Typ.SPORT);
+		Schuh wanderschuhU = firma.createSchuh(Typ.WANDER);
+		Schuh stiefelU = firma.createSchuh(Typ.STIEFEL);
 		
-		Produkt sportschuhE = erzeugerE.fabrikMethode(Typ.SPORT);
-		Produkt wanderschuhE = erzeugerE.fabrikMethode(Typ.WANDER);
-		Produkt stiefelE = erzeugerE.fabrikMethode(Typ.STIEFEL);
+		firma = new EnkiSchuhfirma();
+		Schuh sportschuhE = firma.createSchuh(Typ.SPORT);
+		Schuh wanderschuhE = firma.createSchuh(Typ.WANDER);
+		Schuh stiefelE = firma.createSchuh(Typ.STIEFEL);
 		
 		System.out.println(sportschuhD);
 		System.out.println(wanderschuhD);
